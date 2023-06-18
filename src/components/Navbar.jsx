@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-blue-500 grid grid-cols-12 gap-2 px-4 md:px-12">
       <div className="navbar-start col-span-2">
-        <Image src={Logo} width={100} height={100}></Image>
+        <Image src={Logo} width={120} height={120}></Image>
       </div>
       <div className="navbar-center col-span-7 lg:col-span-6 flex">
         <div className="form-control w-full">
