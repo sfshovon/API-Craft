@@ -1,0 +1,71 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+import { AiOutlineHeart, AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
+import { HiOutlineShoppingBag } from "react-icons/hi";
+import Logo from "../../public/Logo.png";
+
+const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  return (
+    <div className="navbar bg-blue-500 grid grid-cols-12 gap-2 px-4 md:px-12">
+      <div className="navbar-start col-span-2">
+        <Image src={Logo} width={100} height={100}></Image>
+      </div>
+      <div className="navbar-center col-span-7 lg:col-span-6 flex">
+        <div className="form-control w-full">
+          <input
+            type="text"
+            placeholder="Search"
+            className="input input-bordered rounded-full"
+          />
+        </div>
+      </div>
+      <div className="flex-none col-span-3 lg:col-span-4 justify-end">
+        <div className=" text-white justify-center items-center me-4 hidden lg:flex">
+          <AiOutlineUser></AiOutlineUser>
+          <span className="ml-2 text-sm">Account</span>
+        </div>
+        <div className="text-white justify-center items-center me-4  hidden lg:flex">
+          <AiOutlineHeart></AiOutlineHeart>
+          <span className="ml-2 text-sm">My Items</span>
+        </div>
+        <div className="flex text-white justify-center items-center">
+          <HiOutlineShoppingBag></HiOutlineShoppingBag>
+        </div>
+        <div className="dropdown dropdown-end lg:hidden">
+          <label tabIndex={0} className="btn btn-ghost">
+            <button
+              className=" text-white"
+              onClick={() => setShowMenu(!showMenu)}
+            >
+              <AiOutlineMenu />
+            </button>
+          </label>
+          {showMenu && (
+            <ul
+              tabIndex={0}
+              className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <div className="flex justify-start items-center">
+                  <AiOutlineUser></AiOutlineUser>
+                  <span className="ml-2 text-sm">Account</span>
+                </div>
+              </li>
+              <li>
+                <div className="flex justify-start items-center">
+                  <AiOutlineHeart></AiOutlineHeart>
+                  <span className="ml-2 text-sm">My Items</span>
+                </div>
+              </li>
+            </ul>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
