@@ -1,15 +1,14 @@
 import { footerList } from "@/utils/FooterData";
-import React from "react";
-import SS from "../../public/SS.png";
 import Image from "next/image";
-import { FaInstagram } from "react-icons/fa";
-import { BsFacebook, BsDribbble, BsPinterest } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
+import { BsDribbble, BsFacebook, BsPinterest } from "react-icons/bs";
+import { FaInstagram } from "react-icons/fa";
+import SS from "../../public/SS.png";
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer p-10 bg-blue-700 text-white">
+    <div className="bg-cover bg-no-repeat bg-center bg-[url('../../public/Footer-bg.png')]">
+      <footer className="footer py-10 px-36 bg-blue-700 opacity-90 text-white">
         {footerList?.map(({ title, itemList }) => (
           <div>
             <span className="footer-title">{title}</span>
@@ -34,7 +33,7 @@ const Footer = () => {
           </div>
         ))}
       </footer>
-      <footer className="footer px-10 py-4 bg-blue-950 text-white">
+      <footer className="footer px-32 py-4 bg-blue-950 text-white">
         <div className="items-center grid-flow-col">
           <p>© 2021-2023 SnipShop.com</p>
         </div>
