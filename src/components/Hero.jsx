@@ -12,7 +12,7 @@ const Hero = ({ setCategoryProducts }) => {
         <div className="md:col-span-5 text-center md:text-start">
           <h5 className="text-sm md:text-md font-semibold font-sans mb-3 md:mb-6">100% QUALITY, 100% SATISFACTION</h5>
           <h1 className="w-full md:w-[504px] text-3xl md:text-6xl font-extrabold font-sans mb-3 md:mb-6">Where the world comes to shop</h1>
-          <p className="w-full md:w-[440px] text-justify text-base md:text-lg font-thin">Life is hard enough already. Let us make it a little easier, Vision of Snipshop for a better outlook.</p>
+          <p className="w-full md:w-[440px] text-justify text-base md:text-lg">Life is hard enough already. Let us make it a little easier, Vision of Snipshop for a better outlook.</p>
           <div className="flex justify-center md:justify-start ">
             <button className="mt-4 md:mt-8 w-full md:w-[200px] btn btn-neutral py-2 px-8 rounded-full font-semibold">Shop Now</button>
           </div>
