@@ -23,7 +23,7 @@ const Categories = () => {
   };
 
   return (
-    <div id="category" className="px-4 md:px-8 lg:px-16 py-4 md:py-6 lg:py-8">
+    <div id="category" className="px-4 md:px-20 py-4 md:py-6">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="mb-4 md:mb-0">
           <h1 className="text-2xl md:text-3xl font-bold col-span-12">Shop by Category</h1>
@@ -31,13 +31,9 @@ const Categories = () => {
             Life is hard enough already. Let us make it a little easier.
           </h5>
         </div>
-        <div className="flex justify-center items-center gap-4">
-          <button onClick={handlePrevious}>
-            <AiFillLeftCircle className="text-gray-300" size={20} />
-          </button>
-          <button onClick={handleNext}>
-            <AiFillRightCircle size={20} />
-          </button>
+        <div className="flex justify-center items-center gap-2">
+          <AiFillLeftCircle className="text-gray-300" size={20} onClick={handlePrevious}/>
+          <AiFillRightCircle size={20} onClick={handleNext}/>
         </div>
       </div>
 
