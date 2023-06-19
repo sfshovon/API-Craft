@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { AiOutlineHeart, AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
+import { AiOutlineEdit, AiOutlineHeart, AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import Logo from "../../public/Logo.png";
 
@@ -29,14 +29,15 @@ const Navbar = () => {
           <span className="ml-2 text-sm">Account</span>
         </div>
         <div className="text-white justify-center items-center me-4  hidden lg:flex">
-          <AiOutlineHeart></AiOutlineHeart>
+          <AiOutlineHeart/>
           <span className="ml-2 text-sm">My Items</span>
         </div>
-        <Link href="/crud" className="justify-center items-center me-4 hidden lg:flex">
-          <button className="btn btn-accent bg-red-600 rounded-full text-sm text-white font-bold hover:scale-105">CRUD</button>
+        <Link href="/crud" className="text-white justify-center items-center me-4  hidden lg:flex">
+          <AiOutlineEdit/>
+          <button className="ml-2 text-sm font-bold">CRUD</button>
         </Link>
         <div className="flex text-white justify-center items-center">
-          <HiOutlineShoppingBag></HiOutlineShoppingBag>
+          <HiOutlineShoppingBag/>
         </div>
         <div className="dropdown dropdown-end lg:hidden">
           <label tabIndex={0} className="btn btn-ghost">
@@ -50,23 +51,23 @@ const Navbar = () => {
           {showMenu && (
             <ul
               tabIndex={0}
-              className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+              className="z-50 mt-3 p-2 menu menu-sm dropdown-content bg-white rounded-box w-52"
             >
               <li>
                 <div className="flex justify-start items-center">
-                  <AiOutlineUser></AiOutlineUser>
+                  <AiOutlineUser/>
                   <span className="ml-2 text-sm">Account</span>
                 </div>
               </li>
               <li>
                 <div className="flex justify-start items-center">
-                  <AiOutlineHeart></AiOutlineHeart>
+                  <AiOutlineHeart/>
                   <span className="ml-2 text-sm">My Items</span>
                 </div>
               </li>
               <li>
                 <div className="flex justify-start items-center">
-                  <AiOutlineHeart></AiOutlineHeart>
+                  <AiOutlineEdit/>
                   <span className="ml-2 text-sm">CRUD</span>
                 </div>
               </li>
