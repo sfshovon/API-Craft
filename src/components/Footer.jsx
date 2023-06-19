@@ -8,12 +8,14 @@ import SS from "../../public/SS.png";
 const Footer = () => {
   return (
     <div className="bg-cover bg-no-repeat bg-center bg-[url('../../public/Footer-bg.png')]">
-      <footer className="footer py-10 px-36 bg-blue-700 opacity-90 text-white">
+      <footer className="footer py-10 px-4 md:px-36 bg-blue-700 opacity-90 text-white">
         {footerList?.map(({ title, itemList }) => (
-          <div>
+          <div key={title}>
             <span className="footer-title">{title}</span>
             {itemList?.map((item) => (
-              <a className="link link-hover">{item}</a>
+              <a key={item} className="link link-hover">
+                {item}
+              </a>
             ))}
             {title === "Help" && (
               <div>
@@ -22,18 +24,18 @@ const Footer = () => {
                   <p>Download the SnipShop App</p>
                 </div>
                 <div className="flex gap-3 mt-4 text-lg justify-start">
-                  <FaInstagram></FaInstagram>
-                  <BsFacebook></BsFacebook>
-                  <AiFillTwitterCircle></AiFillTwitterCircle>
-                  <BsDribbble></BsDribbble>
-                  <BsPinterest></BsPinterest>
+                  <FaInstagram />
+                  <BsFacebook />
+                  <AiFillTwitterCircle />
+                  <BsDribbble />
+                  <BsPinterest />
                 </div>
               </div>
             )}
           </div>
         ))}
       </footer>
-      <footer className="footer px-32 py-4 bg-blue-950 text-white">
+      <footer className="footer px-4 md:px-32 py-4 bg-blue-950 text-white">
         <div className="items-center grid-flow-col">
           <p>© 2021-2023 SnipShop.com</p>
         </div>

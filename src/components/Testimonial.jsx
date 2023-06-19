@@ -1,27 +1,7 @@
 "use client"
+import { testimonials } from '@/utils/TestimonialData';
 import { useState } from 'react';
 import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/ai';
-
-const testimonials = [
-  {
-    name: 'Justin Pierre',
-    role: 'Products Seller',
-    quote: 'In 2 years, my business went from just me and my Shop site to 40 employees, my own fulfillment center and over 22 million dollars in revenue.',
-    imageSrc: '/image.png',
-  },
-  {
-    name: 'John Doe',
-    role: 'Products Buyer',
-    quote: "I've been using this product for a year, and it has completely transformed the way I manage my daily tasks. Highly recommended!",
-    imageSrc: '/image-2.png',
-  },
-  {
-    name: 'Sheldon Cole',
-    role: 'Products Buyer',
-    quote: "The customer support provided by this company is exceptional. They always go the extra mile to ensure customer satisfaction.",
-    imageSrc: '/image-3.png',
-  },
-];
 
 const Testimonial = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -37,7 +17,7 @@ const Testimonial = () => {
   const testimonial = testimonials[currentTestimonial];
 
   return (
-    <div className="flex flex-col gap-8 md:flex-row md:items-center md:gap-14 my-24">
+    <div className="flex flex-col gap-8 md:flex-row md:items-center md:gap-14 my-4 md:my-24">
       <div className="py-5 px-4 flex justify-end w-full md:w-[666px]" style={{backgroundImage: "url('base.png')", backgroundSize: 'cover'}}>
         <div className="border border-sky-200 rounded-3xl w-[440px] h-[530px]" style={{backgroundImage: "url('testimonial-vector.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
           <img src={testimonial.imageSrc} alt="image" className="w-full h-full" />

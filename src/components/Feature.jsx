@@ -26,7 +26,7 @@ const Feature = () => {
         </div>
       </div>
 
-      <div className="mt-48 mb-16 flex flex-col-reverse md:flex-row justify-center items-center md:gap-x-32 md:py-0">
+      <div className="mt-4 md:mt-48 mb-16 flex flex-col-reverse md:flex-row justify-center items-center md:gap-x-32 md:py-0">
         <div>
           <h2 className="w-full md:w-[442px] text-2xl md:text-3xl font-bold text-center md:text-left">
             Sell Easily on Social Media
@@ -40,9 +40,38 @@ const Feature = () => {
           </div>
         </div>
 
-        <div className="flex justify-center w-full h-[500px] bg-center bg-no-repeat bg-cover md:w-[622px] md:h-[622px]" style={{ backgroundImage: `url('media-bg.png')`}}>
-          <div className="relative top-[80px] left-4">
-            <img src="image-4.png" className="h-[200px] w-[200px] md:h-[310px] md:w-[310px] " alt="image-4" />
+        <div className="flex relative justify-center w-full h-[500px] bg-center bg-no-repeat bg-cover md:w-[622px] md:h-[622px]" style={{ backgroundImage: `url('media-bg.png')` }}>
+          <div className="h-[200px] absolute top-16 md:top-20">
+            <img src="image-4.png" className="h-[200px] w-[200px] md:h-[310px] md:w-[310px]" alt="image-4" />
+          </div>
+          <div className="h-[200px] absolute left-6 md:left-28 bottom-20 md:bottom-24 flex gap-3">
+            <div className="relative">
+              <img src="sunglass.png" className="h-[70px] w-[60px] md:h-[120px] md:w-[100px]" alt="image-4" />
+              <div className="absolute top-0 left-0">
+                <img src="facebook.png" className="h-full w-full" alt="facebook" />
+              </div>
+              <div className="absolute bottom-32 left-2">
+                <h6 className="text-xs font-bold">$12.00</h6>
+              </div>
+            </div>
+            <div className="relative">
+              <img src="shoe.png" className="h-[70px] w-[60px] md:h-[120px] md:w-[100px]" alt="shoe" />
+              <div className="absolute top-0 left-0">
+                <img src="instagram.png" className="h-full w-full" alt="instagram" />
+              </div>
+              <div className="absolute bottom-32 left-2">
+                <h6 className="text-xs font-bold">$35.00</h6>
+              </div>
+            </div>
+            <div className="relative">
+              <img src="watch.png" className="h-[70px] w-[60px] md:h-[120px] md:w-[100px]" alt="watch" />
+              <div className="absolute top-0 left-2">
+                <img src="twitter.png" className="h-full w-full" alt="tk" />
+              </div>
+              <div className="absolute bottom-32 left-2">
+                <h6 className="text-xs font-bold">$22.00</h6>
+              </div>
+            </div>
           </div>
         </div>
       
