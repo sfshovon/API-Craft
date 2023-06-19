@@ -3,11 +3,11 @@ import { AiFillDownCircle } from "react-icons/ai";
 import { BsFillCircleFill } from "react-icons/bs";
 import CategoryTabs from "./CategoryTabs";
 
-const Hero = () => {
+const Hero = ({ setCategoryProducts }) => {
 
   return (
     <div className="px-4 md:px-32 bg-cover bg-no-repeat bg-center bg-[url('../../public/Hero-bg.png')] min-h-[1400px] md:min-h-[800px]">
-      <CategoryTabs></CategoryTabs>
+      <CategoryTabs setCategoryProducts={setCategoryProducts}></CategoryTabs>
       <div className="mt-8 md:mt-24 grid grid-cols-1 md:grid-cols-12 gap-2">
         <div className="md:col-span-5 text-center md:text-start">
           <h5 className="text-sm md:text-md font-semibold font-sans mb-3 md:mb-6">100% QUALITY, 100% SATISFACTION</h5>

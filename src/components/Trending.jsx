@@ -23,7 +23,7 @@ const Trending = () => {
         </div>
       </div>
       <div className="grid grid-cols-10 gap-10 lg:gap-4 mt-16 ml-0 lg:ml-24">
-        <div className="lg:col-span-2 md:col-span-5 mx-6 lg:mx-0 col-span-10 py-4 px-4 flex bg-sky-100 h-40 rounded-xl relative">
+        <div className="lg:col-span-2 md:col-span-5 mx-6 lg:mx-0 col-span-10 py-4 px-4 flex bg-blue-100 h-40 rounded-xl relative">
           <div>
             <h3 className="text-lg font-bold">Seven Zero Five</h3>
             <p>Starting</p>
@@ -33,7 +33,7 @@ const Trending = () => {
             <img src="705.png" alt="705" className=""/>
           </div>
         </div>
-        <div className="lg:col-span-2 md:col-span-5 mx-6 lg:mx-0 col-span-10 py-4 px-4 flex bg-sky-100 h-40 rounded-xl relative">
+        <div className="lg:col-span-2 md:col-span-5 mx-6 lg:mx-0 col-span-10 py-4 px-4 flex bg-purple-100 h-40 rounded-xl relative">
           <div>
             <h3 className="text-lg font-bold">Clock</h3>
             <p>Starting</p>
@@ -43,7 +43,7 @@ const Trending = () => {
             <img src="Clock.png" alt="clock" className=""/>
           </div>
         </div>
-        <div className="lg:col-span-2 md:col-span-5 mx-6 lg:mx-0 col-span-10 py-4 px-4 flex bg-sky-100 h-40 rounded-xl relative">
+        <div className="lg:col-span-2 md:col-span-5 mx-6 lg:mx-0 col-span-10 py-4 px-4 flex bg-purple-100 h-40 rounded-xl relative">
           <div>
             <h3 className="text-lg font-bold">Curology</h3>
             <p>Starting</p>
@@ -53,7 +53,7 @@ const Trending = () => {
             <img src="Curology-1.png" alt="curology-1" className=""/>
           </div>
         </div>
-        <div className="lg:col-span-2 md:col-span-5 mx-6 lg:mx-0 col-span-10 py-4 px-4 flex bg-sky-100 h-40 rounded-xl relative">
+        <div className="lg:col-span-2 md:col-span-5 mx-6 lg:mx-0 col-span-10 py-4 px-4 flex bg-cyan-50 h-40 rounded-xl relative">
           <div>
             <h3 className="text-lg font-bold">Chair</h3>
             <p>Starting</p>
