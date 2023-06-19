@@ -66,10 +66,12 @@ const Navbar = () => {
                 </div>
               </li>
               <li>
-                <div className="flex justify-start items-center">
-                  <AiOutlineEdit/>
-                  <span className="ml-2 text-sm">CRUD</span>
-                </div>
+                <Link href="/crud">
+                  <div className="flex justify-start items-center">
+                    <AiOutlineEdit/>
+                    <span className="ml-2 text-sm">CRUD</span>
+                  </div>
+                </Link>
               </li>
             </ul>
           )}
