@@ -1,6 +1,5 @@
 import Categories from '@/components/Categories'
 import Feature from '@/components/Feature'
-import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import PreOrder from '@/components/PreOrder'
 import Testimonial from '@/components/Testimonial'
@@ -15,7 +14,6 @@ export default function Home() {
       <PreOrder/>
       <Feature/>
       <Testimonial/>
-      <Footer/>
     </>
 
   )
