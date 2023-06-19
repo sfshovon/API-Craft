@@ -1,15 +1,9 @@
 "use client"
+import { categories } from "@/utils/CategoriesData";
 import Link from "next/link";
 import { useState } from "react";
 
 const CategoryTabs = () => {
-  const categories = [
-    "smartphones", "laptops", "fragrances", "skincare", "groceries", "home-decoration",
-    "furniture", "tops", "womens-dresses", "womens-shoes", "mens-shirts", "mens-shoes",
-    "mens-watches", "womens-watches", "womens-bags", "womens-jewellery", "sunglasses",
-    "automotive", "motorcycle", "lighting"
-  ];
-
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const getCategoryName = (category) => {

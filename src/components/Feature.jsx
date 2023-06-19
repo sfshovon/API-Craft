@@ -50,7 +50,7 @@ const Feature = () => {
               <div className="absolute top-0 left-0">
                 <img src="facebook.png" className="h-full w-full" alt="facebook" />
               </div>
-              <div className="absolute bottom-32 left-2">
+              <div className="absolute bottom-32 md:bottom-20 left-2">
                 <h6 className="text-xs font-bold">$12.00</h6>
               </div>
             </div>
@@ -59,7 +59,7 @@ const Feature = () => {
               <div className="absolute top-0 left-0">
                 <img src="instagram.png" className="h-full w-full" alt="instagram" />
               </div>
-              <div className="absolute bottom-32 left-2">
+              <div className="absolute bottom-32 md:bottom-20 left-2">
                 <h6 className="text-xs font-bold">$35.00</h6>
               </div>
             </div>
@@ -68,7 +68,7 @@ const Feature = () => {
               <div className="absolute top-0 left-2">
                 <img src="twitter.png" className="h-full w-full" alt="tk" />
               </div>
-              <div className="absolute bottom-32 left-2">
+              <div className="absolute bottom-32 md:bottom-20 left-2">
                 <h6 className="text-xs font-bold">$22.00</h6>
               </div>
             </div>

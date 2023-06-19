@@ -1,12 +1,11 @@
 "use client"
+import { categories } from "@/utils/CategoriesData";
 import { useEffect, useState } from "react";
 import { AiFillLeftCircle, AiFillRightCircle, AiOutlinePlusCircle } from "react-icons/ai";
 
 const Categories = () => {
   const [products, setProducts] = useState([]);
   const [currentCategory, setCurrentCategory] = useState(0);
-
-  const categories = ["smartphones", "laptops", "fragrances", "skincare", "groceries", "home-decoration", "furniture", "tops", "womens-dresses", "womens-shoes", "mens-shirts", "mens-shoes", "mens-watches", "womens-watches", "womens-bags", "womens-jewellery", "sunglasses", "automotive", "motorcycle", "lighting"];
   
   useEffect(() => {
     fetch(`https://dummyjson.com/products/category/${categories[currentCategory]}`)
