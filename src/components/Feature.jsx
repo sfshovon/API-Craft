@@ -18,7 +18,7 @@ const Feature = () => {
           <div>
             <h3 className="w-full md:w-[361px] text-2xl md:text-3xl font-bold text-center md:text-left">Explore Most Popular Brands</h3>
             <p className="px-4 md:px-0 mt-8 w-full md:w-[320px] text-base text-center md:text-justify text-[#585858] font-light">Life is hard enough already. Let us make it a little easier.</p>
-            <div className="mt-12 flex items-center justify-center md:justify-start">
+            <div className="mt-12 flex items-center justify-center md:justify-start gap-2">
               <h3 className="text-base font-bold">See All</h3>
               <AiOutlineArrowRight size={20} />
             </div>
@@ -34,7 +34,7 @@ const Feature = () => {
           <p className="px-4 md:px-0 mt-8 w-full md:w-[320px] text-base text-center md:text-justify text-[#585858] font-light">
             Life is hard enough already. Let us make it a little easier.
           </p>
-          <div className="mt-12 flex items-center justify-center md:justify-start">
+          <div className="mt-12 flex items-center justify-center md:justify-start gap-2">
             <h3 className="text-base font-bold">See All</h3>
             <AiOutlineArrowRight size={20} />
           </div>
