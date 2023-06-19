@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import Modal from "./Modal";
+import { useState } from "react";
+import { Toaster, toast } from "react-hot-toast";
 import Form from "./Form";
+import Modal from "./Modal";
 
 const EditProduct = ({ prevProduct, setProducts, products }) => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -10,15 +11,7 @@ const EditProduct = ({ prevProduct, setProducts, products }) => {
   };
 
   const handleEditProduct = async (product) => {
-    const {
-      title,
-      price,
-      rating,
-      stock,
-      brand,
-      category,
-      thumbnail,
-      description,
+    const { title, price, rating, stock, brand, category, thumbnail, description,
     } = product;
 
     fetch(`https://dummyjson.com/products/${prevProduct?.id}`, {
@@ -33,7 +26,6 @@ const EditProduct = ({ prevProduct, setProducts, products }) => {
         category: category,
         thumbnail: thumbnail,
         description: description,
-        // images: [imageUrl],
       }),
     })
       .then((res) => res.json())
@@ -44,6 +36,7 @@ const EditProduct = ({ prevProduct, setProducts, products }) => {
         updatedProducts[index] = data;
         setProducts(updatedProducts);
         setModalOpen(false);
+        toast("Product Has Been Updated")
       })
       .catch((error) => {
         console.log("Error updating product:", error);
@@ -71,6 +64,7 @@ const EditProduct = ({ prevProduct, setProducts, products }) => {
           ></Form>
         </Modal>
       )}
+      <Toaster/>
     </>
   );
 };

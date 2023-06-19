@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Toaster, toast } from "react-hot-toast";
 import Modal from "./Modal";
 
 const DeleteProduct = ({ product, setProducts, products }) => {
@@ -22,6 +23,7 @@ const DeleteProduct = ({ product, setProducts, products }) => {
         );
         setProducts(updatedProducts);
         setModalOpen(false);
+        toast("Product Has Been Deleted")
       })
       .catch((error) => {
         console.log("Error Deleting product:", error);
@@ -63,6 +65,7 @@ const DeleteProduct = ({ product, setProducts, products }) => {
           </div>
         </Modal>
       )}
+      <Toaster/>
     </>
   );
 };

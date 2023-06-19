@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Toaster, toast } from "react-hot-toast";
 import Form from "./Form";
 import Modal from "./Modal";
 
@@ -33,6 +34,7 @@ const AddProduct = ({ products, setProducts }) => {
         console.log("data", data);
         setProducts([...products, data]);
         setModalOpen(false);
+        toast("Product Has Been Added")
       })
       .catch((error) => {
         console.log("Error adding product:", error);
@@ -58,6 +60,7 @@ const AddProduct = ({ products, setProducts }) => {
           ></Form>
         </Modal>
       )}
+      <Toaster/>
     </>
   );
 };
