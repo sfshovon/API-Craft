@@ -1,4 +1,3 @@
-import AllProducts from '@/components/AllProducts'
 import Categories from '@/components/Categories'
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
@@ -9,7 +8,6 @@ export default function Home() {
     <>
       <Hero/>
       <Categories/>
-      <AllProducts/>
       <Testimonial/>
       <Footer/>
     </>

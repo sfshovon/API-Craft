@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineHeart, AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
 import { HiOutlineShoppingBag } from "react-icons/hi";
@@ -10,9 +11,9 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <div className="navbar bg-blue-500 grid grid-cols-12 gap-2 px-4 md:px-12">
-      <div className="navbar-start col-span-2">
+      <Link href="/" className="navbar-start col-span-2">
         <Image src={Logo} width={120} height={120}></Image>
-      </div>
+      </Link>
       <div className="navbar-center col-span-7 lg:col-span-6 flex">
         <div className="form-control w-full">
           <input
@@ -31,6 +32,9 @@ const Navbar = () => {
           <AiOutlineHeart></AiOutlineHeart>
           <span className="ml-2 text-sm">My Items</span>
         </div>
+        <Link href="/crud" className="justify-center items-center me-4 hidden lg:flex">
+          <button className="btn btn-accent bg-red-600 rounded-full text-sm text-white font-bold hover:scale-105">CRUD</button>
+        </Link>
         <div className="flex text-white justify-center items-center">
           <HiOutlineShoppingBag></HiOutlineShoppingBag>
         </div>
@@ -58,6 +62,12 @@ const Navbar = () => {
                 <div className="flex justify-start items-center">
                   <AiOutlineHeart></AiOutlineHeart>
                   <span className="ml-2 text-sm">My Items</span>
+                </div>
+              </li>
+              <li>
+                <div className="flex justify-start items-center">
+                  <AiOutlineHeart></AiOutlineHeart>
+                  <span className="ml-2 text-sm">CRUD</span>
                 </div>
               </li>
             </ul>

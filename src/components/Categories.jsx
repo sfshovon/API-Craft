@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const Categories = () => {
@@ -12,7 +12,7 @@ const Categories = () => {
       .then((res) => setProducts(res?.products));
   }, []);
   return (
-    <div className="px-8 py-4">
+    <div id="category" className="px-8 py-4">
       <div className="grid grid-cols-12 gap-3">
         <h2 className="text-2xl font-bold col-span-12">Shop by Category</h2>
         <h6 className="text-sm col-span-12 lg:col-span-2">
