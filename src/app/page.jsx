@@ -1,10 +1,10 @@
 "use client"
-import Categories from '@/components/Categories'
-import Feature from '@/components/Feature'
-import Hero from '@/components/Hero'
-import PreOrder from '@/components/PreOrder'
-import Testimonial from '@/components/Testimonial'
-import Trending from '@/components/Trending'
+import Categories from '@/components/Categories/Categories'
+import Feature from '@/components/Feature/Feature'
+import Hero from '@/components/Hero/Hero'
+import PreOrder from '@/components/PreOrder/PreOrder'
+import Testimonial from '@/components/Testimonial/Testimonial'
+import Trending from '@/components/Trending/Trending'
 import { useState } from 'react'
 
 export default function Home() {

@@ -1,6 +1,5 @@
-import React from 'react'
 
-const Modal = ({modalOpen, setModalOpen, children, title}) => {
+const Modal = ({ modalOpen, setModalOpen, children, title }) => {
   return (
     <dialog id="my_modal_3" className="modal bg-black bg-opacity-30" open={modalOpen}>
       <div className="modal-box ">

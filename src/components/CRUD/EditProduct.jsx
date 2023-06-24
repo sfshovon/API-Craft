@@ -5,7 +5,6 @@ import Modal from "./Modal";
 
 const EditProduct = ({ prevProduct, setProducts, products }) => {
   const [modalOpen, setModalOpen] = useState(false);
-
   const handleEditButton = () => {
     setModalOpen(true);
   };
@@ -28,43 +27,36 @@ const EditProduct = ({ prevProduct, setProducts, products }) => {
         description: description,
       }),
     })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("updatedData", data);
-        const index = products.findIndex((product) => product.id === data.id);
-        const updatedProducts = [...products];
-        updatedProducts[index] = data;
-        setProducts(updatedProducts);
-        setModalOpen(false);
-        toast("Product Has Been Updated")
-      })
-      .catch((error) => {
-        console.log("Error updating product:", error);
-      });
+    .then((res) => res.json())
+    .then((data) => {
+      // console.log("updatedData", data);
+      const index = products.findIndex((product) => product.id === data.id);
+      const updatedProducts = [...products];
+      updatedProducts[index] = data;
+      setProducts(updatedProducts);
+      setModalOpen(false);
+      toast("Product Has Been Updated")
+    })
+    .catch((error) => {
+      console.log("Error updating product:", error);
+    });
   };
 
   return (
     <>
-      <button
-        className="px-3 py-2 bg-gray-300 rounded-xl text-sm"
-        onClick={handleEditButton}
-      >
-        Edit
-      </button>
-      {modalOpen && (
-        <Modal
-          modalOpen={modalOpen}
-          setModalOpen={setModalOpen}
-          title="Update a Product"
-        >
-          <Form
-            handlefunction={handleEditProduct}
-            action="Update"
-            prevProduct={prevProduct}
-          ></Form>
-        </Modal>
-      )}
-      <Toaster/>
+      <button className="px-3 py-2 bg-gray-300 rounded-xl text-sm" onClick={handleEditButton}> Edit</button>
+      {
+        modalOpen && (
+          <Modal modalOpen={modalOpen} setModalOpen={setModalOpen} title="Update a Product">
+            <Form
+              handlefunction={handleEditProduct}
+              action="Update"
+              prevProduct={prevProduct}
+            />
+          </Modal>
+        )
+      }
+    <Toaster/>
     </>
   );
 };

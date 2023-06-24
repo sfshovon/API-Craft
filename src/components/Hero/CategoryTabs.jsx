@@ -21,34 +21,33 @@ const CategoryTabs = ({ setCategoryProducts }) => {
   };
 
   const handleCategoryClick = (category) => {
-    console.log(category)
+    // console.log(category)
     setSelectedCategory(category);
     fetch(`https://dummyjson.com/products/category/${category}`)
     .then(res => res.json())
     .then(data => setCategoryProducts(data?.products));
   };
 
-
   return (
     <div className="md:flex md:justify-center md:items-center">
       <ul className="menu menu-vertical lg:menu-horizontal grid grid-cols-2 md:grid-cols-1">
-        {
-          allCategories?.map((category, index) => (
-            <li key={index}>
-              <Link
-                href="#category"
-                className={`px-4 py-2 text-sm font-medium ${
-                  selectedCategory === category
-                    ? "text-gray-800"
-                    : "text-gray-800 hover:text-gray-600"
-                } transition duration-300 ease-in-out`}
-                onClick={() => handleCategoryClick(category)}
-              >
-                {getCategoryName(category)}
-              </Link>
-            </li>
-          ))
-        }
+      {
+        allCategories?.map((category, index) => (
+          <li key={index}>
+            <Link
+              href="#category"
+              className={`px-4 py-2 text-sm font-medium ${
+                selectedCategory === category
+                  ? "text-gray-800"
+                  : "text-gray-800 hover:text-gray-600"
+              } transition duration-300 ease-in-out`}
+              onClick={() => handleCategoryClick(category)}
+            >
+              {getCategoryName(category)}
+            </Link>
+          </li>
+        ))
+      }
       </ul>
     </div>
   );

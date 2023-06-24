@@ -1,11 +1,11 @@
-import AllProducts from '@/components/AllProducts';
+import ShowAllProducts from "@/components/CRUD/ShowAllProducts";
 
-const page = () => {
+const allProducts = () => {
   return (
     <>
-      <AllProducts/>
+      <ShowAllProducts/>
     </>
   );
 };
 
-export default page;
+export default allProducts ;
