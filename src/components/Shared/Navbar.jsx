@@ -1,8 +1,10 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineEdit, AiOutlineHeart, AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
 import { HiOutlineShoppingBag } from "react-icons/hi";
+import logo from '../../../public/Logo.png';
 
 
 const Navbar = () => {
@@ -10,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-blue-500 grid grid-cols-12 gap-2 px-4 md:px-12">
       <Link href="/" className="navbar-start col-span-2">
-        <img src="logo.png"></img>
+        <Image src={logo} width={120} height={120} />
       </Link>
       <div className="navbar-center col-span-7 lg:col-span-6 flex">
         <div className="form-control w-full">
