@@ -7,9 +7,8 @@ const ShowAllProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch("https://dummyjson.com/products")
-      .then((res) => res.json())
-      // .then(console.log);
-      .then((res) => setProducts(res?.products));
+    .then((res) => res.json())
+    .then((res) => setProducts(res?.products));
   }, []);
 
   return (

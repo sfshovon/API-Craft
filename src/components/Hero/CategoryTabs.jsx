@@ -14,9 +14,7 @@ const CategoryTabs = ({ setCategoryProducts }) => {
 
   const getCategoryName = (category) => {
     let modifiedName = category.replace(/-/g, " "); 
-    modifiedName = modifiedName.replace(/(^|\s)\S/g, (match) =>
-      match.toUpperCase()
-    ); 
+    modifiedName = modifiedName.replace(/(^|\s)\S/g, (match) =>match.toUpperCase()); 
     return modifiedName;
   };
 
@@ -41,9 +39,9 @@ const CategoryTabs = ({ setCategoryProducts }) => {
                   ? "text-gray-800"
                   : "text-gray-800 hover:text-gray-600"
               } transition duration-300 ease-in-out`}
-              onClick={() => handleCategoryClick(category)}
+              onClick={() => handleCategoryClick(category?.name)}
             >
-              {getCategoryName(category)}
+              {getCategoryName(category?.name)}
             </Link>
           </li>
         ))

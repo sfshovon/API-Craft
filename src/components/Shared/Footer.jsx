@@ -23,7 +23,7 @@ const Footer = () => {
               title === "Help" && (
                 <div>
                   <div className="p-2 border-2 border-white rounded-full flex gap-2">
-                    <Image src="/SS.png" width={22} height={22} alt="ss" />
+                    <Image src="/SS.png" width={22} height={22} alt="ss" alt="" />
                     <p>Download the SnipShop App</p>
                   </div>
                   <div className="flex gap-3 mt-4 text-lg justify-start">

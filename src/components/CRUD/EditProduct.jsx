@@ -30,7 +30,7 @@ const EditProduct = ({ prevProduct, setProducts, products }) => {
     .then((res) => res.json())
     .then((data) => {
       // console.log("updatedData", data);
-      const index = products.findIndex((product) => product.id === data.id);
+      const index = products.findIndex((product) => product?.id === data?.id);
       const updatedProducts = [...products];
       updatedProducts[index] = data;
       setProducts(updatedProducts);

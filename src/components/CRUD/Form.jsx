@@ -91,18 +91,14 @@ const Form = ({ handlefunction, action, prevProduct }) => {
         <input
           type="text"
           value={product?.thumbnail}
-          onChange={(e) =>
-            setProduct({ ...product, thumbnail: e.target.value })
-          }
+          onChange={(e) =>setProduct({ ...product, thumbnail: e.target.value })}
           placeholder="Thumbnail"
           className="input border-2 border-gray-200 input-sm w-full"
         />
         <textarea
           placeholder="Description"
           value={product?.description}
-          onChange={(e) =>
-            setProduct({ ...product, description: e.target.value })
-          }
+          onChange={(e) =>setProduct({ ...product, description: e.target.value })}
           className="textarea border-2 border-gray-200 textarea-sm w-full"
         ></textarea>
         <button

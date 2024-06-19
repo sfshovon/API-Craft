@@ -6,7 +6,7 @@ const Category = ({ product }) => {
     <>
       <div className="card shadow-xl col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3">
         <figure className="px-4 md:px-6 pt-6 md:pt-10 h-40 sm:h-48 md:h-56">
-          <img src={images[0]} alt="Category" className="rounded-xl h-full object-cover" />
+          <img src={images[0] ?? images[1]} alt="Category" className="rounded-xl h-full object-cover" />
         </figure>
         <div className="card-body h-auto">
           <h2 className="card-title text-base md:text-lg">{title}</h2>
